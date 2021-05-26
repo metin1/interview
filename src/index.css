@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,198 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS */
+
+body {
+  background: #1f2d3a;
+  color: #ffffff;
+}
+
+.tableWrapper {
+  margin: 150px auto;
+  border: 1px solid #243342;
+  border-radius: 5px;
+  background: #34495e;
+  width: 100%;
+  max-width: 900px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+table td, table th {
+  padding: 7px 10px;
+}
+
+table .middleAlign {
+  display: flex;
+  align-items: center;
+}
+
+table th {
+  font-weight: bold;
+  user-select: none;
+  cursor: pointer;
+  height: 50px;
+}
+
+table th:hover {
+  background: #425d78;
+}
+
+table thead tr, table tr:not(:last-child) {
+  border-bottom: 1px solid #2e4155;
+}
+
+/* Functionality */
+
+.canceled td {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.debit {
+  color: #e74c3c;
+}
+
+.credit {
+  color: #2ecc71;
+}
+
+.currency {
+  text-align: right;
+}
+
+td.currency {
+  padding-right: 34px;
+}
+
+.currency .middleAlign {
+  justify-content: flex-end;
+}
+
+.negativeBalance .balance {
+  color: #e74c3c;
+}
+
+.canceledColumn .middleAlign {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.checkboxWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* CHECKBOX */
+
+/*
+Copyright (c) 2020 by Hannes Kamecke (https://codepen.io/hansmaad/pen/qaGrQL)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+.md-checkbox {
+  position: relative;
+  margin: 1em 0;
+  text-align: left;
+}
+.md-checkbox.md-checkbox-inline {
+  display: inline-block;
+}
+.md-checkbox label {
+  cursor: pointer;
+  display: inline;
+  line-height: 1.25em;
+  vertical-align: top;
+  clear: both;
+  padding-left: 1px;
+}
+.md-checkbox label:not(:empty) {
+  padding-left: 0.75em;
+}
+.md-checkbox label:before, .md-checkbox label:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.md-checkbox label:before {
+  width: 1.25em;
+  height: 1.25em;
+  background: #fff;
+  border: 1px solid #243342;
+  border-radius: 0.125em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.md-checkbox input[type=checkbox] {
+  outline: 0;
+  visibility: hidden;
+  width: 1.25em;
+  margin: 0;
+  display: block;
+  float: left;
+  font-size: inherit;
+}
+.md-checkbox input[type=checkbox]:checked + label:before {
+  background: #27ae60;
+  border: none;
+}
+.md-checkbox input[type=checkbox]:checked + label:after {
+  transform: translate(0.25em, 0.3365384615em) rotate(-45deg);
+  width: 0.75em;
+  height: 0.375em;
+  border: 0.125em solid #fff;
+  border-top-style: none;
+  border-right-style: none;
+}
+.md-checkbox input[type=checkbox]:disabled + label:before {
+  border-color: rgba(0, 0, 0, 0.26);
+}
+.md-checkbox input[type=checkbox]:disabled:checked + label:before {
+  background: rgba(0, 0, 0, 0.26);
 }
